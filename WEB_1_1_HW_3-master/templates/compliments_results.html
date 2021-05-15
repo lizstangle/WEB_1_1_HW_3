@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Compliments Results
+{% endblock %}
+
+{% block content %}
+
+<!-- Your HTML code goes here! -->
+
+<!-- we have to build a for loop -->
+<p>Hello {{users_name}}!</p>
+
+    {% if wants_compliments == 'yes' %}
+        <ul>
+        {% for compliment in select_compliments %}
+            <li> {{ compliment }} </li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>Ok then no compliments for you!</p>
+    {% endif %}
+
+{% endblock %}
